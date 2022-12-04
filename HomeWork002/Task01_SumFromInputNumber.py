@@ -5,11 +5,14 @@
 # - 0.67 -> 13
 # - 198.45 -> 27
 
-user_input = float(input("Введите вещественное число: "))
-sum_number = 0
+from decimal import Decimal
+
+user_input = Decimal(input("Enter any number: "))
+sum_numbers = 0
+user_input *= 10 ** (len(str(user_input)) - 2)
+
 for i in range(len(str(user_input))):
-    # user_input %= 10
-    # print(user_input)
-    sum_number += round(user_input % 10)
-    print(sum_number, i)
+    sum_numbers += user_input % 10
     user_input //= 10
+
+print(f"\nThe sum of digits from this number is '{sum_numbers}'")
