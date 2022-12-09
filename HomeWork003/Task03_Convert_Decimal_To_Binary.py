@@ -9,3 +9,15 @@
 # 11
 # out
 # 1011
+
+
+def dec_to_bin(a: int):
+    result = ''
+    while a != 0:
+        result = result + str(a % 2)
+        a //= 2
+    else:
+        return result[::-1]
+
+
+print(dec_to_bin(int(input("Enter any decimal number: "))))
