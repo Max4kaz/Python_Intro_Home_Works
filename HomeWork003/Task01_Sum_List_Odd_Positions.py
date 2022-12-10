@@ -12,6 +12,10 @@
 # [4, 2, 4, 9]
 # 8
 
+# Замечание к ДЗ:
+# Мария Андреева・Преподаватель
+# Ссылка должна быть pull-request
+
 from random import sample, choices
 
 
